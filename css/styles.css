@@ -1,11 +1,23 @@
-#show-order {
+#pizzaDetail {
   display: none;
 }
 
-.order {
+body {
+  margin: 20px;
+  background-color: #9bfdff;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: red;
+  color: black;
+}
+
+.pizzaOrder {
   cursor: pointer;
   color: #0088cc;
 }
 
-.contact:hover {
+.pizzaOrder:hover {
   text-decoration: underline;
+}

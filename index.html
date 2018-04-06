@@ -11,44 +11,47 @@
   <body>
     <div class="jumbotron">
       <h1>Justin's Pizza</h1>
-      <p>If its pizza you want, We got it!</p>
+      <p><strong>If its pizza you want, We got it!</strong></p>
     </div>
 
-    <form id="pizza-type">
-      <select id=size class="form-control">
-        <option value="">Choose an option</option>
-        <option value="1">Small</option>
-        <option value="2">Medium</option>
-        <option value="3">Large</option>
+    <form id="order-receipt">
+      <select id=pizza-size class="form-control">
+        <option value="Small">if no option chosen small will be ordered</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
       </select>
-      <select id=toppings class="form-control">
-        <option value="">Choose an option</option>
-        <option value="1">Cheese</option>
-        <option value="2">Anchovies</option>
-        <option value="3">Pepperoni</option>
+      <br>
+      <select id=pizza-toppings class="form-control">
+        <option value="Cheese">If no option chosen cheese will be ordered</option>
+        <option value="Cheese">Cheese</option>
+        <option value="Anchovies">Anchovies</option>
+        <option value="Pepperoni">Pepperoni</option>
       </select>
       <br>
       <button type="submit" class="btn-success">Order!</button>
     </form>
     <br>
+    <div class="row">
+      <h2>Orders:</h2>
+      <div id="Output">
+        <ul id="pizzaList">
 
-    <h2>Orders:</h2>
-    <br>
-    <ul id="orders">
 
-    </ul>
-
-    <div class="col-md-12">
-      <div id="show-order">
-        <h2>Order Detail:</h2>
-
-        <p>Pizza size: <span class="pizza-size"></span></p>
-        <p>Pizza toppings: <span class="pizza-toppings"></span></p>
-        <p>Order Total:</p>
-        <h3>$ <span class="order-total"></span></h3>
+        </ul>
       </div>
-
     </div>
 
+
+    <div class="row">
+      <div id="pizzaDetail">
+        <h2>Order Detail:</h2>
+        <p>Pizza Size: <span class="pizza-size"></span></p>
+        <p>Pizza Toppings: <span class="pizza-toppings"></span></p>
+        <p>Order Total:</p>
+        <h3>$ <span class="order-total"></span>.00</h3>
+      </div>
+    </div>
+    <img src="img/pizza.jpeg" alt="">
   </body>
 </html>

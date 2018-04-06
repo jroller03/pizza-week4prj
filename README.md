@@ -14,7 +14,7 @@ A website created with CSS and HTML to gather a user's likes of a pizza and calc
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses my repository and loads index| Homepage with user input form |
 | **Program Gathers User Input** | User input: pizza size and toppings | Output: cost of pizza and list of ordered |
-| **Program gives list of toppings for user to type in and choose**| User Input: "small cheese" | Output: "$5.00" |
+| **Program gives list of toppings for user to type in and choose**| User Input: "small cheese" | Output: "$7.00" |
 
 ## Setup/Installation Requirements
 
