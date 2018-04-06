@@ -1,7 +1,6 @@
-
 function Pizza(size, toppings) {
   this.size = size;
-  this.toppings = [];
+  this.toppings = ["Cheese", "Anchovies", "Pepperoni"];
 };
 
 Pizza.prototype.price = function() {
@@ -14,10 +13,10 @@ Pizza.prototype.price = function() {
   } else {
     price *= 1;
   }
-  if (this.toppings === "Cheese") {
-    price === price;
+  if (this.toppings === "Pepperoni" || "Anchovies") {
+    price += 2
   } else {
-    price += 2;
+    price = 5;
   }
   return price;
 };
@@ -29,16 +28,13 @@ $(document).ready(function() {
     var inputtedPizzaToppings = $("select#pizza-toppings").val();
     var newPizza = new Pizza(inputtedPizzaSize, inputtedPizzaToppings);
 
-     $.each($("input[name='toppings']:checked"), function() {
-       newPizza.toppings.push($(this).val());
-     });
 
-     $("ul#pizzaList").append("<li><span class='pizzaOrder'>" + newPizza.size + newPizza.toppings + " Pizza Order" + "</span></li>");
+     $("ol#pizzaList").append("<li><span class='pizzaOrder'>" + newPizza.size +  inputtedPizzaToppings + " Pizza Order" + "</span></li>");
 
     $(".pizzaOrder").last().click(function() {
       $("#pizzaDetail").show();
       $(".pizza-size").text(newPizza.size);
-      $(".pizza-toppings").text(newPizza.toppings);
+      $(".pizza-toppings").text(inputtedPizzaToppings);
       $(".order-total").text(newPizza.price());
       console.log(inputtedPizzaToppings)
     });
